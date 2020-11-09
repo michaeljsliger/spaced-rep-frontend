@@ -1,0 +1,18 @@
+.dashboard-box {
+    background-color: #e3e3e3;
+    padding: 12px;
+    margin: 12px;
+}
+
+.dashboard-words-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard-words-list li {
+    margin: 8px;
+    padding: 8px;
+    list-style: none;
+    background-color: rgba(165, 165, 165, 0.404);
+}

@@ -1,0 +1,11 @@
+.login-reg-route {
+    color: white;
+    background-color: #4A2545;
+    padding: 8px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.log-route-header {
+    padding: 8px;
+}

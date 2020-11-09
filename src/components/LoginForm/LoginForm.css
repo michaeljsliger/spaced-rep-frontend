@@ -1,4 +1,4 @@
-.Registration-Form {
+.LoginForm {
     background-color: #beac7a;
     padding: 8px;
     display: flex;
@@ -9,7 +9,6 @@
     color: black;
     border-radius: 30px;
     box-shadow: 4px 4px 8px;
-
 }
 
 footer {
@@ -17,13 +16,13 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 8px;
 }
 
-.registration-box {
+.login-box {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 3px;
 }
-

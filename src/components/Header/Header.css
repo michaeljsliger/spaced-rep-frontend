@@ -1,0 +1,17 @@
+header {
+    background-color: #070006bd;
+    padding: 8px;
+}
+
+.header-text {
+    color: white;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+.nav-text {
+    padding: 4px;
+}

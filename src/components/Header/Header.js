@@ -31,9 +31,9 @@ class Header extends Component {
   renderLoginLink() {
     return (
       <nav>
-        <Link to='/login'>Login</Link>
-        {' '}
-        <Link to='/register'>Sign up</Link>
+        <Link className="header-text nav-text" to='/login'>Login</Link>
+        
+        <Link className="header-text nav-text" to='/register'>Sign up</Link>
       </nav>
     )
   }
@@ -42,8 +42,8 @@ class Header extends Component {
     return (
       <header>
         <h1>
-          <Link to='/'>
-            Spaced repetition
+          <Link className="header-text" to='/'>
+            Spaced Repetition
           </Link>
         </h1>
         {TokenService.hasAuthToken()

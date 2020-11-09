@@ -27,28 +27,28 @@ export default class App extends Component {
           {hasError && (
             <p>There was an error! Oh no!</p>
           )}
-          <Switch>
-            <PrivateRoute
-              exact
-              path={'/'}
-              component={DashboardRoute}
-            />
-            <PrivateRoute
-              path={'/learn'}
-              component={LearningRoute}
-            />
-            <PublicOnlyRoute
-              path={'/register'}
-              component={RegistrationRoute}
-            />
-            <PublicOnlyRoute
-              path={'/login'}
-              component={LoginRoute}
-            />
-            <Route
-              component={NotFoundRoute}
-            />
-          </Switch>
+            <Switch>
+              <PrivateRoute
+                exact
+                path={'/'}
+                component={DashboardRoute}
+              />
+              <PrivateRoute
+                path={'/learn'}
+                component={LearningRoute}
+              />
+              <PublicOnlyRoute
+                path={'/register'}
+                component={RegistrationRoute}
+              />
+              <PublicOnlyRoute
+                path={'/login'}
+                component={LoginRoute}
+              />
+              <Route
+                component={NotFoundRoute}
+              />
+            </Switch>
         </main>
       </div>
     );
