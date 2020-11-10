@@ -1,5 +1,5 @@
 import React from 'react';
-import AuthService from '../../services/auth-api-service';
+import API_SERVICES from '../../services/API-services';
 import './Dashboard.css';
 
 export default class Dashboard extends React.Component {
@@ -9,7 +9,7 @@ export default class Dashboard extends React.Component {
     }
 
     componentDidMount() {
-        return AuthService.getLanguageContent()
+        return API_SERVICES.getLanguageContent()
             .then(json => {
                 this.setState({
                     language: json.language,
@@ -25,8 +25,7 @@ export default class Dashboard extends React.Component {
                     {el.original}
                 </div>
                 <div>
-                    {el.correct_count}:
-                    {el.incorrect_count}
+                     {el.correct_count}:{el.incorrect_count}
                 </div>
             </li>
         })
@@ -36,16 +35,17 @@ export default class Dashboard extends React.Component {
                 <div className="dashboard-header">
                     <h2>Dashboard</h2>
                 </div>
-                {this.state.language.name}
-                <br />
-                {this.state.language.total_score} total correct guesses
+                <h2>
+                    {this.state.language.name}
+                </h2>
+                <h5>
+                    Total Correct: {this.state.language.total_score}
+                </h5>
                 <div>
-                    <div>
-                        Words:
-                        <ul className="dashboard-words-list">
-                            {wordsArr}
-                        </ul>
-                    </div>
+                    <ul className="dashboard-words-list">
+                        {wordsArr}
+                    </ul>
+
                 </div>
                 <div className="dashboard-start-button-box">
                     <a href="/learn"><button>Learn!</button></a>
