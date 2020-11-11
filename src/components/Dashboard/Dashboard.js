@@ -42,13 +42,14 @@ export default class Dashboard extends React.Component {
                     Total Correct: {this.state.language.total_score}
                 </h5>
                 <div>
+                    <div>Words to practice</div>
                     <ul className="dashboard-words-list">
                         {wordsArr}
                     </ul>
 
                 </div>
                 <div className="dashboard-start-button-box">
-                    <a href="/learn"><button>Learn!</button></a>
+                    <a href="/learn"><button>Start Practicing!</button></a>
                 </div>
             </div>
         )
