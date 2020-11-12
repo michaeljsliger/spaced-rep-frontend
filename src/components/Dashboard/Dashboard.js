@@ -25,7 +25,12 @@ export default class Dashboard extends React.Component {
                     {el.original}
                 </div>
                 <div>
-                     {el.correct_count}:{el.incorrect_count}
+                    <p className="correct">
+                        {el.correct_count}
+                    </p>
+                    <p className="incorrect">
+                        {el.incorrect_count}
+                    </p>
                 </div>
             </li>
         })
@@ -41,7 +46,7 @@ export default class Dashboard extends React.Component {
                 <h5>
                     Total Correct: {this.state.language.total_score}
                 </h5>
-                <div>
+                <div className="dashboard-words-list-upper">
                     <div>Words to practice</div>
                     <ul className="dashboard-words-list">
                         {wordsArr}

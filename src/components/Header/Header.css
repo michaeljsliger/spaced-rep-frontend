@@ -1,6 +1,7 @@
 header {
     background-color: #070006bd;
     padding: 8px;
+    width: 100vw;
 }
 
 .header-text {
@@ -14,4 +15,9 @@ nav {
 }
 .nav-text {
     padding: 4px;
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: column;
 }

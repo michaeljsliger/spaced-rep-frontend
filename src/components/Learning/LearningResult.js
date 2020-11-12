@@ -9,16 +9,16 @@ class LearningResult extends React.Component {
                 {langContext => {
                     // state of route component
                     return (
-                        <div>
-                            <h2>{this.props.guess ? 'You were correct! :D' : 'Good try, but not quite right :('}!</h2>
-                            <div>
+                        <div className="learn-translate-box">
+                            <h2 className="learn-translate-header">{this.props.guess ? 'You were correct! :D' : 'Good try, but not quite right :('}</h2>
+                            <div className="white-color">
                                 <h4>{langContext.language.name}</h4>
                                 <div>
                                     <p>Total Correct Guesses: {langContext.language.total_score}</p>
                                 </div>
                             </div>
                             <div>
-                                <p>
+                                <p className="white-color">
                                     {
                                         (this.props.guess)
                                             ? `'${langContext.guessWord}' was the correct translation for '${langContext.word.original}!'`
