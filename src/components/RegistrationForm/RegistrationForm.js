@@ -4,6 +4,7 @@ import { Input, Required, Label } from '../Form/Form'
 import AuthApiService from '../../services/auth-api-service'
 import Button from '../Button/Button'
 import './RegistrationForm.css'
+import TokenService from '../../services/token-service'
 
 class RegistrationForm extends Component {
   static defaultProps = {
@@ -21,6 +22,13 @@ class RegistrationForm extends Component {
       name: name.value,
       username: username.value,
       password: password.value,
+    }).then(() => {
+    return AuthApiService.postLogin({
+      username: username.value,
+      password: password.value,
+    })
+    }).then(auth => {
+      return TokenService.saveAuthToken(auth.authToken)
     })
       .then(user => {
         name.value = ''
